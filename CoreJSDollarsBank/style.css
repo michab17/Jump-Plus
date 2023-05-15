@@ -1,0 +1,18 @@
+.button {
+    display: inline-block;
+    padding: 10px;
+    background-color: lightgray;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+.hidden {
+  display: none !important;
+}
+
+input[type="password"] {
+  width: 1em;
+  text-align: center;
+  margin-right: 0.5em;
+}

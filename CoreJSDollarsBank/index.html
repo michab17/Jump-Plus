@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dollars Bank</title>
+  <script src="login.js" type="module"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id="mainPage">
+    <section>
+      <h1>Welcome to Dollars Bank!</h1>
+      <p>Sign up today and start banking like all the professionals</p>
+      <button class="button" id="loginButton">Login</button>
+      <button class="button" id="registerButton">Register</button>
+    </section>
+    <section id="features">
+      <h2>Our Features</h2>
+      <ul>
+        <li><i class="features"></i> Mostly secure transactions!</li>
+        <li><i class="features"></i> You dont need actual money!</li>
+        <li><i class="features"></i> Super easy money transfers!</li>
+        <li><i class="features"></i> Real-time transaction updates!</li>
+      </ul>
+    </section>
+    <section id="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="testimonial">
+        <p>"Dollars Bank has made managing my finances so much easier. I highly recommend it to anyone who wants to
+          withdraw, deposit and transfer their fake, non-existant money."</p>
+        <cite>Adrian Brambleman</cite>
+      </div>
+      <div class="testimonial">
+        <p>"I was hesitant to switch to Dollars Bank at first, but I'm so glad I did. The interface is easy to use and the
+          customer service is fantastic."</p>
+        <cite>John Deer</cite>
+      </div>
+    </section>
+  </div>
+  <div id="loginPage" class="hidden">
+    <section id="bannerLogin">
+      <h1>Welcome to Dollars Bank!</h1>
+      <p>Enter your information below</p>
+    </section>
+    <form id="login-form"> <!--  method="get" -->
+      <label for="username">Username</label><br>
+      <input type="text" name="username" id="username"><br>
+      <div id="pinpad">
+        <input type="password" id="digit1" maxlength="1" readonly>
+        <input type="password" id="digit2" maxlength="1" readonly>
+        <input type="password" id="digit3" maxlength="1" readonly>
+        <input type="password" id="digit4" maxlength="1" readonly></br>
+        <input type="button" value="1" id="1" class="pinNum" />
+        <input type="button" value="2" id="2" class="pinNum" />
+        <input type="button" value="3" id="3" class="pinNum" /><br>
+        <input type="button" value="4" id="4" class="pinNum" />
+        <input type="button" value="5" id="5" class="pinNum" />
+        <input type="button" value="6" id="6" class="pinNum" /><br>
+        <input type="button" value="7" id="7" class="pinNum" />
+        <input type="button" value="8" id="8" class="pinNum" />
+        <input type="button" value="9" id="9" class="pinNum" /><br>
+        <input type="button" value="0" id="0" class="pinNum" />
+        <input type="reset" value="Clear" id="clear" class="pinButton clear" />
+      </div>
+      <input type="submit" value="enter" name="LoginSubmit" id="enter" class="pinButton enter" />
+    </form>
+  </div>
+  <div id="registerPage" class="hidden">
+    <section id="banner">
+      <h1>Welcome to Dollars Bank!</h1>
+      <p>Enter your desired information to register</p>
+    </section>
+    <form id="register-form">
+      <label for="username">Username</label><br>
+      <input type="text" name="username" id="registerUsername" placeholder="Username..."><br>
+      <div id="registerPinpad">
+        <input type="password" id="registerDigit1" maxlength="1" readonly>
+        <input type="password" id="registerDigit2" maxlength="1" readonly>
+        <input type="password" id="registerDigit3" maxlength="1" readonly>
+        <input type="password" id="registerDigit4" maxlength="1" readonly></br>
+        <input type="button" value="1" id="1" class="registerPinNum" />
+        <input type="button" value="2" id="2" class="registerPinNum" />
+        <input type="button" value="3" id="3" class="registerPinNum" /><br>
+        <input type="button" value="4" id="4" class="registerPinNum" />
+        <input type="button" value="5" id="5" class="registerPinNum" />
+        <input type="button" value="6" id="6" class="registerPinNum" /><br>
+        <input type="button" value="7" id="7" class="registerPinNum" />
+        <input type="button" value="8" id="8" class="registerPinNum" />
+        <input type="button" value="9" id="9" class="registerPinNum" /><br>
+        <input type="button" value="0" id="0" class="registerPinNum" />
+        <input type="button" value="Clear" id="clear" class="pinButton clear" />
+      </div>
+      <label for="accountType">Account Type:</label>
+      <select id="accountType">
+        <option value="checking">Checking</option>
+        <option value="saving">Saving</option>
+      </select>
+      <label for="initDeposit">Initial Deposit:</label>
+      <input type="number" name="initDeposit" id="initDeposit" placeholder="x.xx"/>
+      <input type="submit" value="enter" name="registerSubmit" id="enter" class="pinButton enter" />
+    </form>
+  </div>
+  <div id="userPage" class="hidden">
+    <section id="banner">
+      <h1>Welcome <span id="userUsername"></span>!</h1>
+      <p>Please select your desired option</p>
+      <button class="button" id="depositButton">Deposit</button>
+      <button class="button" id="withdrawButton">Withdraw</button>
+      <button class="button" id="transferButton">Transfer</button>
+      <button class="button" id="transactionButton">View Last Five Transactions</button>
+      <button class="button" id="infoButton">View Account Information</button>
+      <br>
+      <button class="button" id="logout">Logout</button>
+    </section>
+  </div>
+  <div id="depositPage" class="hidden">
+    <form id="depositForm">
+      <label for="depositAccountType">Account Type:</label>
+      <select id="depositAccountType">
+        <option value="Checking">Checking</option>
+        <option value="Saving">Saving</option>
+      </select>
+      <label for="depositInput">Enter the amount you would like to deposit</label><br>
+      <input type="number" name="depositInput" id="depositInput" placeholder="X.XX"><br>
+      <input type="submit" value="Submit" id="depositSubmit" />
+    </form>
+  </div>
+  <div id="withdrawPage" class="hidden">
+    <form id="withdrawForm">
+      <label for="withdrawAccountType">Account Type:</label>
+      <select id="withdrawAccountType">
+        <option value="Checking">Checking</option>
+        <option value="Saving">Saving</option>
+      </select>
+      <label for="withdrawInput">Enter the amount you would like to withdraw</label><br>
+      <input type="number" name="withdrawInput" id="withdrawInput" placeholder="X.XX"><br>
+      <input type="submit" value="Submit" id="withdrawSubmit" />
+    </form>
+  </div>
+  <div id="transferPage" class="hidden">
+    <form id="transferForm">
+      <label for="transferAccountName">Account Name:</label>
+      <input type="text" name="transferAccountName" id="transferAccountName" placeholder="Account Name">
+      <label for="transferToAccountType">Account To Type:</label>
+      <select id="transferToAccountType">
+        <option value="Checking">Checking</option>
+        <option value="Saving">Saving</option>
+      </select><br>
+      <label for="transferInput">Enter the amount you would like to transfer</label><br>
+      <input type="number" name="transferInput" id="transferInput" placeholder="X.XX"><br>
+      <label for="transferFromAccountType">Account From Type:</label>
+      <select id="transferFromAccountType">
+        <option value="Checking">Checking</option>
+        <option value="Saving">Saving</option>
+      </select><br>
+      <input type="submit" value="Submit" id="transferSubmit" />
+    </form>
+  </div>
+  <div id="transactionPage" class="hidden">
+    <h1>Welcome!</h1>
+    <div id="transactionInfo">
+    </div>
+    <button class="button" id="backToUserFromTransaction">Back</button>
+  </div>
+  <div id="infoPage" class="hidden">
+    <h1>Welcome!</h1>
+    <h3>User Info:</h3>
+    <h5>Username: <span id="infoUsername"></span></h5>
+    <h5>Pin: <span id="infoPin"></span></h5>
+    <h3>Account info:</h3>
+    <div id="accountInfo">
+    </div>
+    <button class="button" id="backToUserFromInfo">Back</button>
+  </div>
+  <footer>
+    <p>&copy; 2023 Dollars Bank. All rights reserved.</p>
+  </footer>
+</body>
+</html>
